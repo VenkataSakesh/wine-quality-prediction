@@ -22,11 +22,11 @@ pipeline {
         }
 
         stage('Test') {
-            steps {
-                echo "Running unit tests..."
-                bat "pytest test_app.py"
-            }
-        }
+    steps {
+        echo 'Running unit tests inside Docker...'
+        bat 'docker run --rm wine-app pytest test_app.py'
+    }
+}
 
         stage('Code Quality') {
             steps {
