@@ -1,7 +1,8 @@
-pandas
-numpy
+fastapi
+uvicorn
 scikit-learn
-matplotlib
-seaborn
-jupyter
+joblib
 pytest
+pylint
+bandit
+prometheus-client
