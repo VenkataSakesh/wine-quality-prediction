@@ -8,11 +8,12 @@ pipeline {
 
     stages {
         stage('Build') {
-            steps {
-                echo " Building Docker image..."
-                bat "docker build -t %DOCKER_IMAGE% ."
-            }
-        }
+    steps {
+        echo "Building Docker image..."
+        bat 'docker build -t wine-app -f docker/Dockerfile .'
+    }
+}
+
 
         stage('Test') {
             steps {
