@@ -1,4 +1,5 @@
 import joblib
+from sklearn.tree import DecisionTreeClassifier
 from sklearn.datasets import load_wine
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
@@ -10,8 +11,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 )
 
 # Train model
-model = RandomForestClassifier(random_state=42)
-model.fit(X_train, y_train)
+model = DecisionTreeClassifier().fit(X_train, y_train)
 
 # Save model
 joblib.dump(model, "wine_model.pkl")
