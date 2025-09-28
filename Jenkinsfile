@@ -15,11 +15,11 @@ pipeline {
         }
 
         stage('Build') {
-            steps {
-                echo "Building Docker image..."
-                bat "docker build -t %DOCKER_IMAGE% ."
-            }
-        }
+    steps {
+        echo "Building Docker image..."
+        bat "docker build --no-cache -t %DOCKER_IMAGE% ."
+    }
+}
 
         stage('Test') {
     steps {
