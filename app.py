@@ -6,7 +6,7 @@ from prometheus_client import Counter, Histogram, generate_latest
 from fastapi.responses import Response
 
 class Features(BaseModel):
-    features: List[float]
+    features: list[float]
 
 app = FastAPI()
 model = joblib.load("wine_model.pkl")
